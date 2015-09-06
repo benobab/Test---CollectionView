@@ -14,6 +14,7 @@
 		E25191651B9C726C0015FEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25191631B9C726C0015FEEE /* LaunchScreen.storyboard */; };
 		E25191701B9C726C0015FEEE /* TestCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251916F1B9C726C0015FEEE /* TestCollectionViewTests.swift */; };
 		E251917B1B9C726C0015FEEE /* TestCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251917A1B9C726C0015FEEE /* TestCollectionViewUITests.swift */; };
+		E25191891B9C74160015FEEE /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25191881B9C74160015FEEE /* ButtonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E25191761B9C726C0015FEEE /* TestCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E251917A1B9C726C0015FEEE /* TestCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewUITests.swift; sourceTree = "<group>"; };
 		E251917C1B9C726C0015FEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25191881B9C74160015FEEE /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E25191611B9C726C0015FEEE /* Assets.xcassets */,
 				E25191631B9C726C0015FEEE /* LaunchScreen.storyboard */,
 				E25191661B9C726C0015FEEE /* Info.plist */,
+				E25191881B9C74160015FEEE /* ButtonCell.swift */,
 			);
 			path = TestCollectionView;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				E251915D1B9C726C0015FEEE /* ViewController.swift in Sources */,
 				E251915B1B9C726C0015FEEE /* AppDelegate.swift in Sources */,
+				E25191891B9C74160015FEEE /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

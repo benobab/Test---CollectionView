@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zA2-IY-3YT">
+                                <rect key="frame" x="0.0" y="20" width="600" height="560"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ObA-xG-hv5">
+                                    <size key="itemSize" width="111" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="9Js-Ai-URq" customClass="ButtonCell" customModule="TestCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="111" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBY-ew-7Gy">
+                                                    <rect key="frame" x="8" y="13" width="89" height="83"/>
+                                                    <state key="normal" title="Button" image="Circle1"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="xBY-ew-7Gy" firstAttribute="top" secondItem="9Js-Ai-URq" secondAttribute="topMargin" constant="5" id="1ea-OE-ObG"/>
+                                            <constraint firstItem="xBY-ew-7Gy" firstAttribute="leading" secondItem="9Js-Ai-URq" secondAttribute="leadingMargin" id="GbN-aQ-sQ7"/>
+                                            <constraint firstItem="xBY-ew-7Gy" firstAttribute="trailing" secondItem="9Js-Ai-URq" secondAttribute="trailingMargin" id="YKC-Kz-dQ6"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xBY-ew-7Gy" secondAttribute="bottom" constant="6" id="htQ-4V-Lbz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="button" destination="xBY-ew-7Gy" id="EfN-0p-Sm5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zA2-IY-3YT" secondAttribute="bottom" constant="20" id="1t1-rf-pek"/>
+                            <constraint firstItem="zA2-IY-3YT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Iuz-la-tUr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zA2-IY-3YT" secondAttribute="trailing" constant="-20" id="gks-kZ-DXJ"/>
+                            <constraint firstItem="zA2-IY-3YT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yXK-GJ-ekI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="zA2-IY-3YT" id="Tsf-Mh-4Wg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Circle1" width="111" height="111"/>
+    </resources>
 </document>
