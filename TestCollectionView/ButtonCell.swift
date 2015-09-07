@@ -10,7 +10,9 @@ import UIKit
 
 class ButtonCell: UICollectionViewCell {
     
-    @IBOutlet weak var button: UIButton!
+
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     var test:Int!
 }

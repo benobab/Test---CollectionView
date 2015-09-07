@@ -36,12 +36,15 @@ extension ViewController : UICollectionViewDataSource{
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:ButtonCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! ButtonCell
+            let cell:ButtonCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! ButtonCell
+            cell.label.text = "Yeah \(indexPath.row)"
         cell.backgroundColor = UIColor.whiteColor()
-        cell.button.titleLabel!.text = "button"
-        cell.button.titleLabel?.textColor = UIColor.whiteColor()
-        // Configure the cell
-        return cell
+            if(indexPath.row%2 == 0)
+            {
+                cell.image.hidden = true
+                cell.label.hidden = true
+            }            // Configure the cell
+            return cell
     }
 }
 extension ViewController : UICollectionViewDelegate{
